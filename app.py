@@ -86,8 +86,7 @@ if st.button('Predict'):
     else:
         os = 0
 
-    test = np.array([company, typename, ram, weight, touchsreen,
-                    ips, cpu_brand, hdd, ssd, os, gpu_brand])
+    test = np.array([company, typename, ram, weight, touchsreen, ips, cpu_brand, hdd, ssd, os, gpu_brand])
     test = test.reshape(1, 11)
     if options == 'Lin_Reg':
         st.success(lr1.predict(test)[0])
